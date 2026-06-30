@@ -194,6 +194,14 @@ The DevOps lifecycle has the following stages:
 
 Imagine your college is conducting a technical symposium. Students need an online app to register for the event.
 
+Trainer note:
+
+```text
+On Day 1, do not ask students to create, download, build, or deploy a real app.
+Day 1 is only for understanding the DevOps journey.
+The real app creation demo is moved to Day 5, after students learn Scrum and DevOps basics.
+```
+
 | DevOps Stage | Simple Meaning | College App Example |
 |---|---|---|
 | Plan | Decide what to create | We decide the app needs login, event list, and register button |
@@ -907,11 +915,11 @@ Minimum expected output:
 
 ---
 
-# Day 5: Scrum Events, Artifacts, and User Stories
+# Day 5: Scrum Events, Artifacts, User Stories, and AI App Build
 
 ## Main Topic
 
-Scrum events, Scrum artifacts, user stories, and estimation.
+Scrum events, Scrum artifacts, user stories, estimation, and a guided AI app build using Lovable or a similar app builder.
 
 ## Learning Objectives
 
@@ -922,6 +930,8 @@ Students will be able to:
 - Write simple user stories.
 - Create acceptance criteria.
 - Understand basic estimation using story points.
+- Convert simple user stories into a small generated app.
+- Observe basic build, test, and deploy steps.
 
 ## Simple Explanation
 
@@ -1040,11 +1050,11 @@ Explain:
 
 ### Practical Title
 
-Create Product Backlog and Sprint Plan
+Create Product Backlog, Sprint Plan, and AI App Demo
 
 ### Practical Goal
 
-Students will create user stories, acceptance criteria, and a Sprint Backlog.
+Students will create user stories, acceptance criteria, and a Sprint Backlog. Then they will see how selected stories can become a small working app using Lovable or a similar AI app builder.
 
 ### Show: Completed Example First
 
@@ -1079,7 +1089,7 @@ Then ask the class to suggest 2 acceptance criteria.
 
 ### Do Alone: Group Activity
 
-### Task
+### Part A: Scrum Planning Task
 
 Each group uses its product idea and creates:
 
@@ -1113,6 +1123,108 @@ Each group uses its product idea and creates:
 |---|---|
 |  |  |
 
+### Part B: Guided AI App Build with Lovable
+
+This activity should be done on Day 5, not Day 1. By Day 5, students already understand DevOps stages, Git, CI/CD, deployment, Scrum roles, and user stories. So the app-building activity will feel connected instead of confusing.
+
+Important trainer note:
+
+```text
+Do not ask students to build the app from scratch alone.
+First demonstrate one app creation step-by-step.
+Then let groups try a small version.
+```
+
+#### Show: Trainer Demo First
+
+Use the event registration app as the demo.
+
+Trainer prompt example:
+
+```text
+Create a simple college event registration web app.
+Users should be able to view events and register for one event.
+Include a simple event list, registration form, and confirmation message.
+Keep the design simple for college students.
+```
+
+Trainer explains the connection:
+
+| Scrum / DevOps Item | What Students See in the Demo |
+|---|---|
+| User Story | The app is generated from user needs |
+| Product Backlog | Features are selected from the backlog |
+| Sprint Goal | Only a small first version is created |
+| Code | The generated app contains code |
+| Build | The app is prepared to run |
+| Test | Trainer checks if the form works |
+| Deploy | Trainer shows how the app can be published or previewed |
+
+#### Do Together: Improve the Prompt
+
+Ask the class to improve the prompt by adding 2 details.
+
+Examples:
+
+- Add student name and department fields.
+- Add event date and venue.
+- Show a confirmation message after registration.
+- Make it mobile-friendly.
+
+Improved prompt template:
+
+```text
+Create a simple __________ app for college students.
+The app should allow users to __________.
+The first version should include __________.
+After the user submits the form, show __________.
+Keep the design simple and easy to use.
+```
+
+#### Do Alone: Group Mini Demo
+
+Each group chooses 1 or 2 user stories from its Sprint Backlog and creates a small app screen or prototype using Lovable or a similar tool.
+
+Minimum expected output:
+
+- Create at least 1 screen.
+- Use at least 1 user story as input.
+- Test at least 1 action, such as clicking a button or submitting a form.
+- Explain which DevOps stages they observed: code, build, test, deploy, or monitor.
+
+#### Optional: Download, Build, Test, and Deploy
+
+If time, internet, and tool access are available, the trainer can demonstrate:
+
+1. Download or export the generated code.
+2. Open the code in a local editor.
+3. Install dependencies.
+4. Run the app locally.
+5. Test one feature manually.
+6. Build the app.
+7. Deploy or preview the app.
+
+Keep this as a trainer-guided demonstration. Students do not need to master all commands on Day 5.
+
+Simple command example for a React/Vite app:
+
+```bash
+npm install
+npm run dev
+npm run build
+```
+
+Plain-English explanation:
+
+| Command / Step | In Plain Words |
+|---|---|
+| Download code | Get the app files |
+| Install dependencies | Add the required packages |
+| Run locally | Start the app on our computer |
+| Test | Check if the feature works |
+| Build | Prepare final app files |
+| Deploy | Make the app available online or as a preview |
+
 ### Expected Output
 
 Each group presents:
@@ -1121,12 +1233,15 @@ Each group presents:
 - Sprint Goal
 - Sprint Backlog
 - One user story with acceptance criteria
+- AI-generated app screen or prototype, if tool access is available
+- One observed build/test/deploy learning point
 
 Minimum expected output:
 
 - Write at least 3 user stories.
 - Add acceptance criteria for at least 1 story.
 - Select at least 2 stories for the Sprint Backlog.
+- If using Lovable, create at least 1 simple screen or observe the trainer demo.
 
 ### Assessment Questions
 
@@ -1134,6 +1249,8 @@ Minimum expected output:
 2. What is a Product Backlog?
 3. Write one user story.
 4. What is acceptance criteria?
+5. How can a user story help generate an app screen?
+6. Why is it better to try build/test/deploy after learning the basics first?
 
 ---
 
