@@ -528,13 +528,16 @@ Students will experience how Scrum roles work in a team.
 
 ### Task
 
-Each group chooses a product idea and assigns roles:
+Each group chooses a product idea and assigns specific cross-functional roles to make the simulation realistic:
 
-- 1 Product Owner
-- 1 Scrum Master
-- Remaining students as Developers
+- **1 Product Owner:** Focuses on the "What" and "Why" (features, business value).
+- **1 Scrum Master:** Focuses on the "How" (process, removing blockers, facilitating).
+- **1 Lead Frontend Engineer:** Focuses on User Interface and user experience.
+- **1 Lead Backend Engineer:** Focuses on databases, APIs, and data storage.
+- **1 DevOps / Security Engineer:** Focuses on where the app will live, pipelines, and security risks.
+*(If groups are larger, add QA/Testing Engineer or UI/UX Designer)*
 
-The Product Owner writes the product goal. The Scrum Master facilitates discussion. Developers ask questions and identify what can be built first.
+The Product Owner writes the product goal. The Scrum Master facilitates discussion. The specialized developers ask specific technical questions to identify what can be built first.
 
 ### Product Goal Template
 
@@ -545,13 +548,14 @@ It helps users to __________.
 The first useful version should include __________.
 ```
 
-### Role Discussion Questions
+### Role-Specific Discussion Questions (Roundtable)
 
-- What should be built first?
-- Who are the users?
-- What problem are we solving?
-- What risks or doubts do we have?
-- What help does the team need?
+To make the simulation effective, the Scrum Master should ask these specific questions:
+- **To Product Owner:** "Are the requirements clear enough for the team to start?"
+- **To Frontend Engineer:** "What API data do you need from Backend to build the screens?"
+- **To Backend Engineer:** "Are there any database or architecture blockers?"
+- **To DevOps Engineer:** "Do we have the environments ready to deploy the first feature?"
+- **To All:** "What is the biggest risk that might prevent us from finishing our first feature?"
 
 ### Expected Output
 
@@ -941,6 +945,7 @@ Each group gets 7 to 10 minutes to present:
 - Use the same project idea throughout the program.
 - Encourage every student to speak during presentations.
 - Focus on understanding first, tools second.
+- **Making Roleplay Effective:** During the Day 4 and Day 6 roleplays, step in as a "Stakeholder" to ask challenging questions. Ensure that the "Scrum Master" isn't acting like a boss, but rather asking the developers (Frontend, Backend, DevOps) what they need to succeed.
 
 ## Materials Required
 
