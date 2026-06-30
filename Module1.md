@@ -199,7 +199,7 @@ Trainer note:
 ```text
 On Day 1, do not ask students to create, download, build, or deploy a real app.
 Day 1 is only for understanding the DevOps journey.
-The real app creation demo is moved to Day 5, after students learn Scrum and DevOps basics.
+The DevOps demo repository is planned using Scrum on Day 5, after students learn Scrum and DevOps basics.
 ```
 
 | DevOps Stage | Simple Meaning | College App Example |
@@ -915,11 +915,11 @@ Minimum expected output:
 
 ---
 
-# Day 5: Scrum Events, Artifacts, User Stories, and AI App Build
+# Day 5: Scrum Events, Artifacts, and DevOps Lab Planning
 
 ## Main Topic
 
-Scrum events, Scrum artifacts, user stories, estimation, and a guided AI app build using Lovable or a similar app builder.
+Scrum events, Scrum artifacts, user stories, estimation, and Scrum planning for the DevOps demo lab.
 
 ## Learning Objectives
 
@@ -930,8 +930,8 @@ Students will be able to:
 - Write simple user stories.
 - Create acceptance criteria.
 - Understand basic estimation using story points.
-- Convert simple user stories into a small generated app.
-- Observe basic build, test, and deploy steps.
+- Convert the DevOps demo lab into a Scrum Product Backlog.
+- Plan the Vagrant, Ansible, Terraform, Docker, and GitHub Actions tasks as a Sprint.
 
 ## Simple Explanation
 
@@ -1050,32 +1050,33 @@ Explain:
 
 ### Practical Title
 
-Create Product Backlog, Sprint Plan, and AI App Demo
+Create Product Backlog and Sprint Plan for the DevOps Demo Lab
 
 ### Practical Goal
 
-Students will create user stories, acceptance criteria, and a Sprint Backlog. Then they will see how selected stories can become a small working app using Lovable or a similar AI app builder.
+Students will create user stories, acceptance criteria, and a Sprint Backlog for the DevOps demo repository. Scrum becomes the planning method for the DevOps practical.
 
 ### Show: Completed Example First
 
-Show these completed user stories for the event registration app.
+Show these completed user stories for the DevOps demo lab.
 
 | ID | User Story | Priority | Story Points |
 |---|---|---|---|
-| US-01 | As a student, I want to view events, so that I can choose one to attend. | High | 2 |
-| US-02 | As a student, I want to register for an event, so that I can reserve my seat. | High | 3 |
-| US-03 | As a coordinator, I want to view registered students, so that I can plan arrangements. | Medium | 5 |
+| US-01 | As a student, I want to start an Ubuntu VM using Vagrant, so that I can get a ready lab environment. | High | 3 |
+| US-02 | As a student, I want Ansible to install required tools, so that setup is repeatable and not manual. | High | 5 |
+| US-03 | As a student, I want Terraform to create a Docker container, so that infrastructure can be managed as code. | High | 5 |
+| US-04 | As a student, I want GitHub Actions to trigger the deployment workflow, so that code changes can run automatically. | Medium | 8 |
 
-Completed acceptance criteria for US-02:
+Completed acceptance criteria for US-01:
 
-- Student can open the event details.
-- Student can click Register.
-- Student receives confirmation.
-- Student cannot register twice for the same event.
+- Vagrantfile is available in the repository.
+- Student can explain what `vagrant up` does.
+- Ubuntu VM starts successfully during trainer demo.
+- Student can identify where provisioning scripts are connected.
 
 ### Do Together: Class Example
 
-Write one user story together for **Library Book Request System**.
+Write one user story together for **Docker deployment**.
 
 Use this fill-in format:
 
@@ -1091,7 +1092,7 @@ Then ask the class to suggest 2 acceptance criteria.
 
 ### Part A: Scrum Planning Task
 
-Each group uses its product idea and creates:
+Each group uses the DevOps demo repository as the product and creates:
 
 - Product Backlog with at least 5 user stories
 - Acceptance criteria for 2 user stories
@@ -1103,11 +1104,11 @@ Each group uses its product idea and creates:
 
 | ID | User Story | Priority | Story Points |
 |---|---|---|---|
-| US-01 |  | High |  |
-| US-02 |  | High |  |
-| US-03 |  | Medium |  |
-| US-04 |  | Medium |  |
-| US-05 |  | Low |  |
+| US-01 | Vagrant lab setup story | High |  |
+| US-02 | Ansible configuration story | High |  |
+| US-03 | Terraform infrastructure story | High |  |
+| US-04 | Docker deployment story | Medium |  |
+| US-05 | GitHub Actions workflow story | Medium |  |
 
 ### Acceptance Criteria Template
 
@@ -1123,107 +1124,139 @@ Each group uses its product idea and creates:
 |---|---|
 |  |  |
 
-### Part B: Guided AI App Build with Lovable
+### Part B: Scrum Addition for the Existing DevOps Demo
 
-This activity should be done on Day 5, not Day 1. By Day 5, students already understand DevOps stages, Git, CI/CD, deployment, Scrum roles, and user stories. So the app-building activity will feel connected instead of confusing.
+Use this GitHub repository as the DevOps practical base:
+
+```text
+https://github.com/deenamanick/vagrant-ansible-terrafom-docker
+```
+
+This activity should be done on Day 5, not Day 1. By Day 5, students already understand DevOps stages, Git, CI/CD, deployment, Scrum roles, and user stories. So the lab will feel connected instead of confusing.
 
 Important trainer note:
 
 ```text
-Do not ask students to build the app from scratch alone.
-First demonstrate one app creation step-by-step.
-Then let groups try a small version.
+Do not ask students to run the full lab alone immediately.
+First explain the lab as a Scrum product.
+Then map each DevOps tool to one backlog item.
+After that, demonstrate selected commands or workflow steps.
 ```
 
-#### Show: Trainer Demo First
+#### Show: Trainer Explains the Lab as a Scrum Product
 
-Use the event registration app as the demo.
-
-Trainer prompt example:
+Product goal:
 
 ```text
-Create a simple college event registration web app.
-Users should be able to view events and register for one event.
-Include a simple event list, registration form, and confirmation message.
-Keep the design simple for college students.
+Create a repeatable DevOps lab where students can provision a VM,
+configure required tools, create infrastructure using Terraform,
+run a Dockerized app, and trigger automation using GitHub Actions.
 ```
 
-Trainer explains the connection:
+Scrum roles for the lab:
 
-| Scrum / DevOps Item | What Students See in the Demo |
+| Scrum Role | Lab Responsibility |
 |---|---|
-| User Story | The app is generated from user needs |
-| Product Backlog | Features are selected from the backlog |
-| Sprint Goal | Only a small first version is created |
-| Code | The generated app contains code |
-| Build | The app is prepared to run |
-| Test | Trainer checks if the form works |
-| Deploy | Trainer shows how the app can be published or previewed |
+| Product Owner | Decides the learning goal and priority of lab tasks |
+| Scrum Master | Facilitates the lab, removes confusion, tracks blockers |
+| Developers | Work on Vagrant, Ansible, Terraform, Docker, and GitHub Actions tasks |
 
-#### Do Together: Improve the Prompt
+#### Tool-to-Backlog Mapping
 
-Ask the class to improve the prompt by adding 2 details.
+| DevOps Tool | Scrum Backlog Item |
+|---|---|
+| Vagrant | Start Ubuntu VM lab environment |
+| Ansible | Install and configure required tools |
+| Terraform | Define and apply infrastructure as code |
+| Docker | Build and run the quiz app container |
+| GitHub Actions | Automate workflow after code changes |
+
+#### Do Together: Create Sprint Goal
+
+Ask the class to complete this Sprint Goal:
+
+```text
+In this Sprint, our team will complete __________
+so that students can understand __________.
+```
+
+Example answer:
+
+```text
+In this Sprint, our team will complete the Vagrant and Ansible setup
+so that students can understand repeatable environment creation.
+```
+
+#### Do Together: Identify Blockers
+
+Ask students what could block the lab.
 
 Examples:
 
-- Add student name and department fields.
-- Add event date and venue.
-- Show a confirmation message after registration.
-- Make it mobile-friendly.
+- Laptop does not support virtualization.
+- Vagrant or VirtualBox is not installed.
+- GitHub token is missing.
+- Internet is slow.
+- Docker service is not running.
+- Terraform command fails.
 
-Improved prompt template:
+Then explain that in Scrum, the Scrum Master helps identify and remove blockers.
 
-```text
-Create a simple __________ app for college students.
-The app should allow users to __________.
-The first version should include __________.
-After the user submits the form, show __________.
-Keep the design simple and easy to use.
-```
+#### Do Alone: Group Sprint Planning
 
-#### Do Alone: Group Mini Demo
+Each group selects 2 or 3 lab stories for its Sprint Backlog.
 
-Each group chooses 1 or 2 user stories from its Sprint Backlog and creates a small app screen or prototype using Lovable or a similar tool.
+Example Sprint Backlog:
+
+| Selected Story | Task | Owner | Status |
+|---|---|---|---|
+| US-01 Vagrant setup | Explain what `vagrant up` does | Student 1 | To Do |
+| US-02 Ansible setup | Identify install scripts/playbooks | Student 2 | To Do |
+| US-04 Docker deployment | Explain image and container flow | Student 3 | To Do |
 
 Minimum expected output:
 
-- Create at least 1 screen.
-- Use at least 1 user story as input.
-- Test at least 1 action, such as clicking a button or submitting a form.
-- Explain which DevOps stages they observed: code, build, test, deploy, or monitor.
+- Write at least 3 lab user stories.
+- Add acceptance criteria for at least 1 story.
+- Select 2 stories for the Sprint Backlog.
+- Identify at least 1 blocker and 1 solution.
 
-#### Optional: Download, Build, Test, and Deploy
+#### Optional: Trainer-Guided DevOps Demo
 
-If time, internet, and tool access are available, the trainer can demonstrate:
+If time, internet, and tool access are available, the trainer can demonstrate selected repo steps:
 
-1. Download or export the generated code.
-2. Open the code in a local editor.
-3. Install dependencies.
-4. Run the app locally.
-5. Test one feature manually.
-6. Build the app.
-7. Deploy or preview the app.
+1. Open or clone the GitHub repository.
+2. Explain the folder structure.
+3. Show the Vagrantfile.
+4. Show Ansible provisioning or install scripts.
+5. Show Terraform workflow.
+6. Show Dockerfile or container deployment.
+7. Show GitHub Actions workflow.
 
 Keep this as a trainer-guided demonstration. Students do not need to master all commands on Day 5.
 
-Simple command example for a React/Vite app:
+Simple command examples:
 
 ```bash
-npm install
-npm run dev
-npm run build
+git clone https://github.com/deenamanick/vagrant-ansible-terrafom-docker.git
+vagrant up
+terraform init
+terraform plan
+terraform apply
 ```
 
 Plain-English explanation:
 
 | Command / Step | In Plain Words |
 |---|---|
-| Download code | Get the app files |
-| Install dependencies | Add the required packages |
-| Run locally | Start the app on our computer |
-| Test | Check if the feature works |
-| Build | Prepare final app files |
-| Deploy | Make the app available online or as a preview |
+| Clone repo | Get the lab code |
+| Vagrant up | Start the lab VM |
+| Ansible provisioning | Install and configure tools automatically |
+| Terraform init | Prepare Terraform |
+| Terraform plan | Preview infrastructure changes |
+| Terraform apply | Create or update infrastructure |
+| Docker run/build | Run the app inside a container |
+| GitHub Actions | Run automation when code changes |
 
 ### Expected Output
 
@@ -1233,15 +1266,15 @@ Each group presents:
 - Sprint Goal
 - Sprint Backlog
 - One user story with acceptance criteria
-- AI-generated app screen or prototype, if tool access is available
-- One observed build/test/deploy learning point
+- One identified lab blocker and possible solution
+- One observed DevOps lab learning point
 
 Minimum expected output:
 
 - Write at least 3 user stories.
 - Add acceptance criteria for at least 1 story.
 - Select at least 2 stories for the Sprint Backlog.
-- If using Lovable, create at least 1 simple screen or observe the trainer demo.
+- Map at least 2 DevOps tools to Scrum backlog items.
 
 ### Assessment Questions
 
@@ -1249,8 +1282,8 @@ Minimum expected output:
 2. What is a Product Backlog?
 3. Write one user story.
 4. What is acceptance criteria?
-5. How can a user story help generate an app screen?
-6. Why is it better to try build/test/deploy after learning the basics first?
+5. How can Scrum help organize a DevOps lab?
+6. Why should we identify blockers before running a technical lab?
 
 ---
 
